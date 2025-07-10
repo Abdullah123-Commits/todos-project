@@ -49,6 +49,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    //SEARCH BUTTON FUNCTONALITY
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+
+    searchBtn.addEventListener('click', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        const tasks = taskList.getElementsByTagName('li');
+
+        for (let task of tasks) {
+            const taskText = task.firstChild.textContent.toLowerCase();
+            if (taskText.includes(searchTerm)) {
+                task.style.display = 'list-item';
+            } else {
+                task.style.display = 'none';
+            }
+        }
+    });
+
+    // CLEAR BUTTON FUNCTIONALITY
+    const clearBtn = document.getElementById('clearAllBtn');
+    clearBtn.addEventListener('click', function () {
+    const taskList = document.getElementById('task-list');
+    taskList.innerHTML = ""; // Clears all <li> elements
+});
+
+
 });
 
 
