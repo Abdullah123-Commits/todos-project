@@ -1,50 +1,53 @@
+        <!--              WHOLE SCRIPT IS MINE BAS UL (OUTPUT) GPT NEY INTEGRATE KIA HA -->
+
+
 <!-- TO DO LIST PROJECT -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- META TAGS -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- TITLE -->
-        <title>todo List</title>
+    <!-- TITLE -->
+    <title>To-Do List (latest)</title>
 
-        <!-- STYLESHEET -->
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
 
-    </head>
-    <!-- START OF BODY -->
-    <body class="main-body">
-        <header>
-            <div id="main-heading"><h1>TO-DO LIST</h1></div>
-            <br>
-        </header>
+<body class="main-body">
+    <!-- ========================= HEADER ========================= -->
+    <header>
+        <div id="main-heading">
+            <h1>TO-DO LIST</h1>
+        </div>
+    </header>
 
-        <!-- START OF SECTION OF BODY -->
-        <section id="form-input">
-            <div id="my-container">
-                <form class="data-input-form">
-                    <input class="data-input-box" type="text" placeholder="Enter your task to do:">
-                    <input class="add-btn" type="submit" value="Add Task">
-                </form>
-            </div>
-        </section>
+    <!-- ======================= INPUT FORM SECTION ======================= -->
+    <section id="form-input">
+        <div id="my-container">
+            <form class="data-input-form">
+                <input class="data-input-box" type="text" id="taskInput" placeholder="Enter your task to do:" required>
+                <input class="add-btn" type="submit" value="Add Task">
+            </form>
+        </div>
+    </section>
 
-        <!-- START OF 2ND SECTION -->
-        <section>
-            <div class="my-container">
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-                <input class="display-box" type="text"><br>
-            </div>
-        </section>
-        
-    </body>
+    <!-- ===================== TASK DISPLAY SECTION ====================== -->
+    <section id="task-display-section">
+        <div class="my-container">
+            <input type="text" id="searchInput" placeholder="Search tasks..." class="data-input-box">
+            <input type="button" id="searchBtn" value="Find" class="add-btn">
+            <input type="button" id="clearAllBtn" value="Clear All Tasks" class="delete-btn">
+
+            <ul id="task-list">
+                <!-- Tasks will appear here dynamically using JS -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===================== SCRIPT FILE ===================== -->
+    <script src="./script.js"></script>
+</body>
 </html>
